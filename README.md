@@ -1,7 +1,7 @@
 # Capstone Project Ideas Analysis
 
 ## Introduction
-This is a project into exploring the current trends and themes of engineering projects in different domains, from architectural and civil to electrical and system design. The further vision of this project is to find out a project that can utilize serveral engineering domain together and finding out the skills in demand for the current labor market.
+This analysis investigates the thematic and technical trends of engineering capstone projects across various institutions, with a focus on identifying patterns in interdisciplinary collaboration and domain-specific innovation. Drawing from over 700 project abstracts from universities such as the University of Waterloo and BCIT, this work examines how engineering domains, ranging from electrical and biomedical to civil and nanotechnology, are evolving to meet current industry demands. Through keyword clustering, similarity metrics, and data visualizations, the study aims to reveal how distinct engineering fields overlap, diverge, and increasingly converge through the integration of shared technologies and methodologies. The ultimate objective is to uncover opportunities for cross-domain synergy and inform the selection of future capstone topics that align with real-world applications and labor market needs.
 
 ## Source
 
@@ -130,7 +130,7 @@ Both areas explore **material properties**, **microscale processes**, and **nove
 
 The data is balance enough for decision making.
 
-![Average cosine similarity between project types](image-1.png)
+![Average cosine similarity based on TF-IDF vectors between project types](image-1.png)
 
 There're amost no overlap on each other, which means the projects are unique even among the same category. Below 5% is commonly a standard for plagiarism. The diversity is proven and thus enhance the variety in engineering applications for real-world problems. Even though the ground disciplines of each engineering domain are different, the application of each engineering projects tends to integrate knowledge and experience from other engineering fields to further refine the final products for commercial use or a specific use.
 
@@ -145,34 +145,59 @@ The clustering and high dimensional data visualization is here to understand how
 ## Intra-Group vs Inter-Group similarity analysis
 
 > Intra-Group Similarities:
-> BioChemNano: 0.052
-> CENG: 0.074
-> Electrical: 0.056
-> Mechanical: 0.054
-> System: 0.046
-> 
-> All Inter-Group Similarities:
-> Electrical vs System: 0.044
-> System vs Electrical: 0.044
-> CENG vs Mechanical: 0.043
-> Mechanical vs CENG: 0.043
-> Electrical vs Mechanical: 0.043
-> Mechanical vs Electrical: 0.043
-> CENG vs Electrical: 0.042
-> Electrical vs CENG: 0.042
-> CENG vs BioChemNano: 0.041
-> BioChemNano vs CENG: 0.041
-> BioChemNano vs Electrical: 0.041
-> Electrical vs BioChemNano: 0.041
-> Mechanical vs BioChemNano: 0.040
-> BioChemNano vs Mechanical: 0.040
-> Mechanical vs System: 0.039
-> System vs Mechanical: 0.039
-> CENG vs System: 0.038
-> System vs CENG: 0.038
-> System vs BioChemNano: 0.038
-> BioChemNano vs System: 0.038
+- BioChemNano: 0.052
+- CENG: 0.074
+- Electrical: 0.056
+- Mechanical: 0.054
+- System: 0.046
 
 The similarity data provides valuable insight into the coherence and distinctiveness of the grouped project categories. Among the intra-group similarities, the CENG group (which includes Civil, Environmental, Geological, and Architectural projects) stands out with the highest similarity score of 0.074. This suggests a strong thematic consistency within this category, likely due to the shared focus on infrastructure, environmental impact, and large-scale physical systems. Conversely, the System group exhibits the lowest intra-group similarity (0.046), reflecting the broader diversity of its components, such as System Design, Mechatronics, and Management, which span hardware integration, AI systems, and user-centric platforms. The moderate similarity levels within groups like Electrical (0.056), Mechanical (0.054), and BioChemNano (0.052) indicate a reasonable degree of internal cohesion while still encompassing varied technical themes.
 
+> All Inter-Group Similarities:
+- Electrical vs System: 0.044
+- System vs Electrical: 0.044
+- CENG vs Mechanical: 0.043
+- Mechanical vs CENG: 0.043
+- Electrical vs Mechanical: 0.043
+- Mechanical vs Electrical: 0.043
+- CENG vs Electrical: 0.042
+- Electrical vs CENG: 0.042
+- CENG vs BioChemNano: 0.041
+- BioChemNano vs CENG: 0.041
+- BioChemNano vs Electrical: 0.041
+- Electrical vs BioChemNano: 0.041
+- Mechanical vs BioChemNano: 0.040
+- BioChemNano vs Mechanical: 0.040
+- Mechanical vs System: 0.039
+- System vs Mechanical: 0.039
+- CENG vs System: 0.038
+- System vs CENG: 0.038
+- System vs BioChemNano: 0.038
+- BioChemNano vs System: 0.038
+
 When examining inter-group similarities, the values remain low across the board, with the highest being 0.044 between Electrical and System. This confirms that the groupings are well-differentiated, with minimal overlap in thematic content. Notably, the relationships between CENG and Mechanical (0.043), and Electrical and Mechanical (0.043) point to some shared foundational engineering principles, particularly around physical design and system implementation. On the other end, the lowest inter-group similarities (0.038) between System and both BioChemNano and CENG reflect their clear conceptual divergence. Overall, these results validate the grouping strategy by demonstrating high intra-group consistency and low inter-group redundancy, while also highlighting areas where broader categories (like System) may encompass a wider variety of topics.
+
+## Further observation
+
+### 1. **How close are capstone design projects to the real life of an engineer?**
+
+Capstone design projects are often the closest simulation of real-world engineering that undergraduate students experience before entering the workforce. These projects require students to work in teams, manage timelines, interface with stakeholders, and navigate the complexities of integrating technical knowledge with practical constraints—mirroring the challenges faced by professional engineers. Many projects are sponsored or mentored by industry partners, enhancing their relevance to current engineering problems. However, the scope is sometimes limited by academic calendars and available resources, which can restrict exposure to the full product development cycle, regulatory compliance, or long-term systems integration. Still, capstones foster critical skills such as problem definition, iterative design, and risk assessment, offering a strong foundation that aligns closely with the day-to-day work of engineers across disciplines.
+
+### 2. **What are potential collaboration opportunities for a more blend-in engineering experience?**
+
+Modern engineering problems are rarely confined to a single discipline, and capstone projects present a natural platform to cultivate interdisciplinary collaboration. As engineering education evolves, there is growing opportunity to design projects that span multiple departments—for instance, combining electrical engineering and computer science for embedded systems, or civil and environmental engineering for sustainable infrastructure. Collaborative capstones can expose students to diverse engineering mindsets and foster systems-level thinking, crucial for addressing complex, interconnected issues such as climate change, autonomous vehicles, or smart cities. Universities can enhance this experience by offering joint courses, shared lab spaces, and interdisciplinary mentorship, thereby promoting a more holistic and collaborative engineering identity. Such experiences prepare students not only to be technically competent, but also to thrive in cross-functional teams in their professional careers.
+
+### 3. **What are the future prospects on the intense use of data for machine learning and AI in general?**
+
+The integration of data-driven methods, particularly machine learning and AI, is rapidly transforming the engineering landscape and is likely to define the next era of innovation. Capstone projects are increasingly incorporating data analytics, from predictive maintenance in mechanical systems to real-time classification in biomedical devices. As sensors, connectivity, and computational power become more accessible, students have greater opportunities to explore intelligent systems design. Looking forward, engineers will need not only domain-specific knowledge but also proficiency in data preprocessing, model selection, and ethical AI deployment. This shift emphasizes the need for curriculum integration of AI tools and platforms, enabling students to build practical, scalable, and socially responsible applications. Ultimately, embracing data-intensive approaches will allow future engineers to design systems that are adaptive, autonomous, and optimized for dynamic real-world environments.
+
+## Conclusion
+
+This analysis reveals not only the thematic diversity of engineering capstone projects, but also the evolving patterns of interdisciplinarity and applied relevance. By mapping keyword similarities and clustering projects across domains, we've shown how certain groups, such as Biomedical, Chemical and Nanotechnology tend to remain science-focused, while others like Electrical, Mechanical, and Systems Engineering are increasingly aligned with industry-driven, client-centered outcomes.
+
+Looking ahead, this kind of data-driven mapping offers a powerful foundation for:
+- Interdisciplinary Capstone Topic Recommendations: Identifying underexplored overlaps between disciplines (e.g., bio-sensing in mechanical devices) could help faculty and students develop richer, more integrated projects.
+- Industry-Aligned Theme Forecasting: By tracking changes in keyword usage over time, departments could better anticipate emerging technology trends and adapt project offerings accordingly.
+- Curriculum Design Based on Trend Analysis: Departments could use insights from clustering and similarity metrics to inform course offerings, skills development, and cross-departmental collaboration.
+
+In future iterations, expanding the dataset to include more institutions, applying topic modeling, and correlating projects with real-world outcomes (e.g., patents, startups, or continued research) could further refine these insights. Ultimately, a more dynamic understanding of capstone project trends can support not just academic planning, but also better alignment with the evolving needs of industry and society.
